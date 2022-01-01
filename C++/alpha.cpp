@@ -1,3 +1,23 @@
+#include <iostream>
+#define HUNGRY 0x01 //2의 승수로 올라간다
+#define THIRSTY 0x02
+#define TIRED 0x04 //0x가 16진수 표현방법
+#define COLD 0x08 //보통 16진수를 이용해 표현하는데 2배씩 커진다  
+#define FIRE 0x10
+#define POISON 0x20
+
+//Define쓰는 이유가독성
+//유지보수
+using namespace std;
+
+int global = 4;//전역변수
+//함수
+
+int Add (int a, int b)
+{
+        return a + b;
+}
+
 int main()
 {
     //자료형 (크기 단위, byte) Data Type
@@ -37,6 +57,38 @@ int main()
     //if, else 
 
     //비트 연산자
+    //비트 곱(&), 합(|), xor(^) 반전(~)
+    //비트 단위로 연산을 진행
+    //& 둘다 1인 경우 1
+    //| 둘중 하나라도 1 이면 1
+    //^ 같으면 0 다르면 1
+    //~ 1은 0으로 0은 1로 
     
+    unsigned int iStatus = 0; //32개의 비트 각 비트에 대응하는 상태를 넣어줄 수 있다.
+    //비트 연산자를 이용한 상태를 잘 활용하면 int일 경우 32가지를 내포 할 수 있다.
+    //상태 추가
+    iStatus |= HUNGRY;
+    iStatus |= THIRSTY;
+    
+    //상태 확인
+    if(iStatus & HUNGRY)
+    {
+        ;
+    }    
+
+    //특정 자리 비트 제가
+    iStatus &= ~THIRSTY;//공식으로 외우자!
+                        // 그 비트를 반전시키고 원래 비트랑 곱연산 해준다
+
+    //변수
+    //1. 지역 변수 : {}안에 묶인 변수
+    //2. 전역 변수 : {}밖에
+    //3. 정적 변수
+    //4. 외부 변수
+
+
+    //함수(기능)(모듈화가 중요 ! 잘 쪼개고 잘 구분하자)
+    data = Add(10,20);
+
     return 0;
 }
