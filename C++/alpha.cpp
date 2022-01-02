@@ -9,13 +9,15 @@
 //Define쓰는 이유가독성
 //유지보수
 using namespace std;
-
+//"cwd": "c:/Users/W24501/ApplePie",
+//"miDebuggerPath": "C:/MinGW/bin/gdb.exe",
 int global = 4;//전역변수
 //함수
 
 int Add (int a, int b)
 {
         return a + b;
+
 }
 
 int main()
@@ -89,6 +91,7 @@ int main()
 
     //함수(기능)(모듈화가 중요 ! 잘 쪼개고 잘 구분하자)
     data = Add(10,20);
+    
 
     return 0;
 }

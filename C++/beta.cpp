@@ -40,6 +40,17 @@ int main() // 가장 먼저 실행되는 함수
     
         break ; // 루프 탈출
     }
+    // printf
+    // printf("asasda %d \n", "10");
+    // scanf
+    // int iInput = 0;
+    // scanf("%d", &iInput);
+    // printf("%d",iInput);
+
 
     return 0;
 }
+
+//단축키
+//지정한 구문 주석 ctrl + k ,c
+//지정한 구문 주석 해제 ctrl +k, u
